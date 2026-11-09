@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  页面：gallery.html 客户佩戴案例图库（第 5 页 / 共 7 页）
+  项目：DY Hair 德宇发制品 · 外贸 B 端工厂官网
+  ------------------------------------------------------------
+  【修改说明】
+  1. 换图：把真实图片按文件名放进 images/ 目录即可，代码无需改动
+     每张图片上方均有 【此处替换图片】 注释与建议拍摄内容
+     图片路径为占位路径，未上传时前台只显示干净的深色块，不会出现提示文字
+  2. 改文字：全站仅英文，直接改标签里的文字即可（无需成对修改）
+  3. 公共文件：css/style.css、js/main.js（与其余 6 页共用，请勿单页修改）
+  4. 本页新增组件样式见 style.css 第 22 节「客户案例图库页组件」
+  5. 图片比例：每张卡片用 ratio-tall / ratio-long / ratio-square / ratio-wide
+     四个类名之一控制占位框比例，换成实拍图后可按照片方向调整类名
+  6. 分类筛选：卡片上的 data-cat 与筛选按钮 data-filter 一一对应，
+     新增案例需同时给按钮分类和卡片分类，脚本自动统计显示数量
+  7. 【重要】客户佩戴照片请使用已获授权的真实素材，勿使用未授权图片；
+     案例图仅作佩戴效果参考，实际发色与卷度以实物为准
+  8. 图片文件名（本页 13 张，均为 gallery- 前缀，与其他页面无重复）：
+     gallery-banner.jpg
+     gallery-lace-wig-01/02/03.jpg
+     gallery-lace-closure-01/02/03.jpg
+     gallery-extensions-01/02.jpg
+     gallery-ponytail-01/02.jpg
+     gallery-custom-wig-01/02.jpg
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real wear and styling gallery of DY Hair human virgin hair products: lace wigs, lace closures, extensions, ponytails and customized wigs.">
+  <title>Gallery | DY Hair</title>
+  <!-- 提前标记 JS 可用，用于滚动淡入动画（无 JS 时内容也会正常显示） -->
+  <script>document.documentElement.classList.add('js-ready');</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     导航栏：7 个页面完全一致，仅 .active 所在项不同
+     ============================================================ -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <!-- 品牌 Logo（纯文字，无需图片） -->
+    <a class="brand" href="index.html" aria-label="DY Hair home">
+      <span class="brand-mark">DY</span>
+      <span>
+        <span class="brand-name">DY Hair</span>
+        <span class="brand-sub">
+          
+          Virgin Hair Factory
+        </span>
+      </span>
+    </a>
+
+    <!-- 主导航：7 个页面互相跳转 -->
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">Factory</a>
+      <a href="products.html">Products</a>
+      <a href="product-detail.html">Product Detail</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="care.html">Hair Care</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      
+      <!-- 移动端汉堡菜单 -->
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     1. 内页顶部横幅
+     ============================================================ -->
+<section class="page-banner">
+  <!-- 【此处替换图片】客户案例页横幅，建议 1920 × 600，佩戴效果拼图或发丝特写 -->
+  <div class="media">
+    <img src="images/gallery-banner.jpg" alt="DY Hair customer wear gallery" data-lightbox
+
+         data-caption-en="DY Hair · Real Customer Wear Gallery">
+  </div>
+  <div class="container page-banner-inner">
+    <div class="eyebrow">WEAR GALLERY</div>
+    <h1>
+      
+      Real Wear, Real Shots
+    </h1>
+    <p class="banner-sub">
+      
+      Real wear shots of lace wigs, lace closures, hair extensions, ponytails and customized wigs, showing true hair texture and styling results.
+    </p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      Gallery
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. 图库主体：标题 → 分类筛选 → 瀑布式案例 → 实拍声明
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">STYLING RESULTS</div>
+      <h2>
+        
+        True-to-Life Results Across Our Range
+      </h2>
+      <p>
+        
+        All cases below are real product shots for evaluating color, curl, density and fit. Click any photo to enlarge.
+      </p>
+      <div class="gold-line"></div>
+    </div>
+
+    <!-- 分类筛选条：按钮 data-filter 与卡片 data-cat 对应 -->
+    <div class="gallery-filter" data-filter-bar>
+      <div class="filter-bar">
+        <button class="filter-btn active" type="button" data-filter="all">All Cases</button>
+        <button class="filter-btn" type="button" data-filter="lace-wigs">Lace Wigs</button>
+        <button class="filter-btn" type="button" data-filter="lace-closure">Lace Closure</button>
+        <button class="filter-btn" type="button" data-filter="hair-extensions">Hair Extensions</button>
+        <button class="filter-btn" type="button" data-filter="ponytail">Ponytail</button>
+        <button class="filter-btn" type="button" data-filter="medical-wigs">Custom Wigs</button>
+      </div>
+      <p class="filter-note">
+        
+        <b data-count>12</b> cases shown · Click any photo to enlarge
+      </p>
+    </div>
+
+    <!-- 12 组佩戴案例：CSS 多列瀑布流，比例类名交错形成错落感 -->
+    <div class="gallery-grid">
+
+      <!-- 案例 01 · 蕾丝发套 -->
+      <div class="gallery-item ratio-tall" data-cat="lace-wigs">
+        <div class="media"><!-- 【此处替换图片】自然黑长直全蕾丝发套佩戴正面，建议竖构图 900 × 1200 -->
+          <img src="images/gallery-lace-wig-01.jpg" alt="Natural black straight full lace wig" data-lightbox
+ data-caption-en="Natural Black Straight · Full Lace Wig Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 01 · LACE WIGS</span>
+          <h3>Natural Black Straight · Full Lace Wig</h3>
+          <p>100% human virgin hair with a natural hairline; length and density customizable.</p>
+        </div>
+      </div>
+
+      <!-- 案例 02 · 蕾丝发套 -->
+      <div class="gallery-item ratio-wide" data-cat="lace-wigs">
+        <div class="media"><!-- 【此处替换图片】大波浪前蕾丝发套侧后方，建议横构图 1200 × 900 -->
+          <img src="images/gallery-lace-wig-02.jpg" alt="Body wave lace front wig" data-lightbox
+ data-caption-en="Body Wave · Lace Front Wig Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 02 · LACE WIGS</span>
+          <h3>Body Wave · Lace Front Wig</h3>
+          <p>Hand-ventilated lace base; set curls can be restyled and dyed.</p>
+        </div>
+      </div>
+
+      <!-- 案例 03 · 蕾丝发套 -->
+      <div class="gallery-item ratio-square" data-cat="lace-wigs">
+        <div class="media"><!-- 【此处替换图片】渐变染色蕾丝发套发色特写，建议方形 1000 × 1000 -->
+          <img src="images/gallery-lace-wig-03.jpg" alt="Ombre color lace wig" data-lightbox
+ data-caption-en="Ombre Color · Lace Wig Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 03 · LACE WIGS</span>
+          <h3>Ombre Color · Lace Wig</h3>
+          <p>Virgin hair, dyeable and restylable, showing an even color transition.</p>
+        </div>
+      </div>
+
+      <!-- 案例 04 · 蕾丝发块 -->
+      <div class="gallery-item ratio-long" data-cat="lace-closure">
+        <div class="media"><!-- 【此处替换图片】13×4 中分蕾丝发块头顶分缝，建议竖构图 800 × 1200 -->
+          <img src="images/gallery-lace-closure-01.jpg" alt="13x4 middle part lace closure" data-lightbox
+ data-caption-en="13x4 Middle Part · Lace Closure Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 04 · LACE CLOSURE</span>
+          <h3>13x4 Middle Part · Lace Closure</h3>
+          <p>Hand-tied base with natural parting; pairs with wefts for a full install.</p>
+        </div>
+      </div>
+
+      <!-- 案例 05 · 蕾丝发块 -->
+      <div class="gallery-item ratio-wide" data-cat="lace-closure">
+        <div class="media"><!-- 【此处替换图片】5×5 自然色蕾丝发块佩戴，建议横构图 1200 × 900 -->
+          <img src="images/gallery-lace-closure-02.jpg" alt="5x5 natural color lace closure" data-lightbox
+ data-caption-en="5x5 Natural Color · Lace Closure Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 05 · LACE CLOSURE</span>
+          <h3>5x5 Natural Color · Lace Closure</h3>
+          <p>Breathable lace with smooth hair direction, suitable for daily wear.</p>
+        </div>
+      </div>
+
+      <!-- 案例 06 · 蕾丝发块 -->
+      <div class="gallery-item ratio-tall" data-cat="lace-closure">
+        <div class="media"><!-- 【此处替换图片】360 蕾丝发块高马尾造型，建议竖构图 900 × 1200 -->
+          <img src="images/gallery-lace-closure-03.jpg" alt="360 lace closure high ponytail" data-lightbox
+ data-caption-en="360 High Ponytail · Lace Closure Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 06 · LACE CLOSURE</span>
+          <h3>360 High Ponytail · Lace Closure</h3>
+          <p>Can be pulled up, showing edge coverage and tight stitching.</p>
+        </div>
+      </div>
+
+      <!-- 案例 07 · 接发 -->
+      <div class="gallery-item ratio-square" data-cat="hair-extensions">
+        <div class="media"><!-- 【此处替换图片】I-Tip 棒棒发接发增量效果，建议方形 1000 × 1000 -->
+          <img src="images/gallery-extensions-01.jpg" alt="I-tip hair extensions added volume" data-lightbox
+ data-caption-en="I-Tip Extensions · Added Volume Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 07 · HAIR EXTENSIONS</span>
+          <h3>I-Tip Extensions · Added Volume</h3>
+          <p>Cold fusion with discreet bonds and a natural volume blend.</p>
+        </div>
+      </div>
+
+      <!-- 案例 08 · 接发 -->
+      <div class="gallery-item ratio-tall" data-cat="hair-extensions">
+        <div class="media"><!-- 【此处替换图片】胶带接发长直造型背影，建议竖构图 900 × 1200 -->
+          <img src="images/gallery-extensions-02.jpg" alt="Tape-in extensions long straight look" data-lightbox
+ data-caption-en="Tape-in Extensions · Long Straight Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 08 · HAIR EXTENSIONS</span>
+          <h3>Tape-in Extensions · Long Straight Look</h3>
+          <p>Flat bonding, smooth tangle-free hair, reusable.</p>
+        </div>
+      </div>
+
+      <!-- 案例 09 · 马尾 -->
+      <div class="gallery-item ratio-wide" data-cat="ponytail">
+        <div class="media"><!-- 【此处替换图片】抓夹马尾蓬松卷侧后，建议横构图 1200 × 900 -->
+          <img src="images/gallery-ponytail-01.jpg" alt="Claw clip ponytail voluminous curls" data-lightbox
+ data-caption-en="Claw Clip Ponytail · Voluminous Curls"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 09 · PONYTAIL</span>
+          <h3>Claw Clip Ponytail · Voluminous Curls</h3>
+          <p>Easy clip-on application with bouncy curls for quick styling.</p>
+        </div>
+      </div>
+
+      <!-- 案例 10 · 马尾 -->
+      <div class="gallery-item ratio-square" data-cat="ponytail">
+        <div class="media"><!-- 【此处替换图片】拉绳马尾自然直发尾，建议方形 1000 × 1000 -->
+          <img src="images/gallery-ponytail-02.jpg" alt="Drawstring ponytail natural straight" data-lightbox
+ data-caption-en="Drawstring Ponytail · Natural Straight"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 10 · PONYTAIL</span>
+          <h3>Drawstring Ponytail · Natural Straight</h3>
+          <p>Drawstring fits securely with sleek straight ends.</p>
+        </div>
+      </div>
+
+      <!-- 案例 11 · 定制头套 -->
+      <div class="gallery-item ratio-long" data-cat="medical-wigs">
+        <div class="media"><!-- 【此处替换图片】定制头套贴合佩戴正面，建议竖构图 800 × 1200 -->
+          <img src="images/gallery-custom-wig-01.jpg" alt="Customized wig comfortable fit" data-lightbox
+ data-caption-en="Customized Wig · Comfortable Fit"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 11 · CUSTOM WIGS</span>
+          <h3>Customized Wig · Comfortable Fit</h3>
+          <p>Made to head size and color requirements with a lightweight breathable cap.</p>
+        </div>
+      </div>
+
+      <!-- 案例 12 · 定制头套 -->
+      <div class="gallery-item ratio-tall" data-cat="medical-wigs">
+        <div class="media"><!-- 【此处替换图片】定制头套发丝质感特写，建议竖构图 900 × 1200 -->
+          <img src="images/gallery-custom-wig-02.jpg" alt="Customized wig hair texture closeup" data-lightbox
+ data-caption-en="Customized Wig · Hair Texture Real Shot"></div>
+        <div class="gallery-cap">
+          <span class="gallery-tag">CASE 12 · CUSTOM WIGS</span>
+          <h3>Customized Wig · Hair Texture</h3>
+          <p>Real shot of sheen and density, without excessive retouching.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 实拍声明三栏 -->
+    <div class="gallery-facts">
+      <div class="gallery-fact" data-reveal>
+        <span class="fact-num">01</span>
+        <h3>REAL SHOTS</h3>
+        <p>All cases are real product shots showing true hair texture without excessive retouching.</p>
+      </div>
+      <div class="gallery-fact" data-reveal>
+        <span class="fact-num">02</span>
+        <h3>FOR REFERENCE</h3>
+        <p>Color and curl may appear slightly different under lighting and styling; the actual product prevails.</p>
+      </div>
+      <div class="gallery-fact" data-reveal>
+        <span class="fact-num">03</span>
+        <h3>MORE CASES</h3>
+        <p>More angles, colors, real shots and videos available on request. Contact us anytime.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     3. 底部行动号召
+     ============================================================ -->
+<section class="cta-band">
+  <div class="container" data-reveal>
+    <h2>
+      
+      Need More Real Shots or a Custom Solution?
+    </h2>
+    <p>
+      
+      Wear references in various colors, lengths and densities, plus catalog and quotation, available on request.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="contact.html">Contact Us &rarr;</a>
+      <a class="btn btn-ghost" href="products.html">View Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     页脚：全站统一，版权信息请勿修改
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">DY</span>
+        <span>
+          <span class="brand-name">DY Hair</span>
+          <span class="brand-sub">Virgin Hair Factory</span>
+        </span>
+      </div>
+      <p>
+        
+        Shandong DY Hair Products Factory · Direct supply of human virgin hair, specializing in lace wigs, closures, extensions and wefts. Custom orders welcome.
+      </p>
+    </div>
+
+    <div>
+      <h3>QUICK LINKS</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Factory</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="care.html">Hair Care</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>PRODUCT RANGE</h3>
+      <ul>
+        <li><a href="category-hair-weft.html">Hair Weft</a></li>
+        <li><a href="category-hair-extensions.html">Hair Extensions</a></li>
+        <li><a href="category-lace-closure.html">Lace Closure</a></li>
+        <li><a href="category-lace-wigs.html">Lace Wigs</a></li>
+        <li><a href="category-medical-wigs.html">Customized Medical Wigs</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 DY Hair | Shandong DY Hair Products Factory
+  </div>
+</footer>
+
+<!-- 全站公共脚本：语言切换 / 图片放大 / 移动端菜单 / 图片缺失静默处理 -->
+<script src="js/main.js"></script>
+
+<!-- 本页专属脚本：按品类筛选案例并同步更新显示数量（公共脚本无需改动） -->
+<script>
+(function () {
+  var btns = Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
+  var items = Array.prototype.slice.call(document.querySelectorAll('[data-cat]'));
+  var bar = document.querySelector('[data-filter-bar]');
+  var counts = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+
+  function applyFilter(key) {
+    var shown = 0;
+    items.forEach(function (item) {
+      var show = (key === 'all' || item.getAttribute('data-cat') === key);
+      item.style.display = show ? '' : 'none';
+      if (show) {
+        shown++;
+        // 重新显示时直接点亮淡入元素，避免 IntersectionObserver 未触发导致内容透明
+        Array.prototype.forEach.call(item.querySelectorAll('[data-reveal]'), function (el) {
+          el.classList.add('in-view');
+        });
+      }
+    });
+    btns.forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-filter') === key);
+    });
+    counts.forEach(function (el) { el.textContent = String(shown); });
+  }
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyFilter(btn.getAttribute('data-filter'));
+      // 切换后回到筛选条，避免停留在被隐藏内容留下的空白位置
+      if (bar && bar.scrollIntoView) bar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  页面：about.html 工厂介绍（第 2 页 / 共 7 页）
+  项目：DY Hair 德宇发制品 · 外贸 B 端工厂官网
+  ------------------------------------------------------------
+  【修改说明】
+  1. 换图：把真实图片按文件名放进 images/ 目录即可，代码无需改动
+     每张图片上方均有 【此处替换图片】 注释
+  2. 改文字：全站仅英文，直接改标签里的文字即可（无需成对修改）
+  3. 公共文件：css/style.css、js/main.js（与其余 6 页共用）
+  4. 本页新增的组件样式见 style.css 第 19 节「内页通用组件」
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shandong DY Hair Products Factory, a direct human virgin hair manufacturer with a complete in-house workflow: raw material sorting, hair processing, hand ventilating, styling, quality inspection and packing.">
+  <title>Factory | DY Hair</title>
+  <!-- 提前标记 JS 可用，用于滚动淡入动画（无 JS 时内容也会正常显示） -->
+  <script>document.documentElement.classList.add('js-ready');</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     导航栏：7 个页面完全一致，仅 .active 所在项不同
+     ============================================================ -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <!-- 品牌 Logo（纯文字，无需图片） -->
+    <a class="brand" href="index.html" aria-label="DY Hair home">
+      <span class="brand-mark">DY</span>
+      <span>
+        <span class="brand-name">DY Hair</span>
+        <span class="brand-sub">
+          
+          Virgin Hair Factory
+        </span>
+      </span>
+    </a>
+
+    <!-- 主导航：7 个页面互相跳转 -->
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">Factory</a>
+      <a href="products.html">Products</a>
+      <a href="product-detail.html">Product Detail</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="care.html">Hair Care</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      
+      <!-- 移动端汉堡菜单 -->
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     1. 内页顶部横幅
+     ============================================================ -->
+<section class="page-banner">
+  <!-- 【此处替换图片】工厂介绍页横幅，建议 1920 × 600，车间全景或厂区外景 -->
+  <div class="media">
+    <img src="images/about-banner.jpg" alt="DY Hair factory overview" data-lightbox
+
+         data-caption-en="DY Hair · Real Shot of Our Factory">
+  </div>
+  <div class="container page-banner-inner">
+    <div class="eyebrow">OUR FACTORY</div>
+    <h1>
+      
+      Shandong DY Hair Products Factory
+    </h1>
+    <p class="banner-sub">
+      
+      Direct Virgin Hair Factory · Full In-house Production · Real Shots
+    </p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      Factory
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. 工厂简介（英文文案按客户提供原文录入）
+     ============================================================ -->
+<section class="section">
+  <div class="container split">
+    <div class="split-text" data-reveal>
+      <div class="eyebrow">WHO WE ARE</div>
+      <h2>
+        
+        A Direct Manufacturer of Human Virgin Hair
+      </h2>
+      <p>
+        
+        Shandong DY Hair Products Factory is a direct manufacturer of human virgin hair. We run a complete production workflow: raw material sorting, hair processing, hand ventilating, styling, quality inspection and packing.
+      </p>
+      <p>
+        
+        We select high-quality virgin hair strictly without mixed inferior hair. We focus on lace wigs, lace closures, hair extensions and hair wefts.
+      </p>
+      <p>
+        
+        We serve buyers at home and abroad and support customized solutions. All photos and videos are real shots without excessive retouching for authentic quality display.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="products.html">View Products &rarr;</a>
+        <a class="btn btn-ghost" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="split-figure" data-reveal>
+      <!-- 【此处替换图片】工厂车间全景，建议 1000 × 750 -->
+      <div class="media">
+        <img src="images/about-factory-overview.jpg" alt="DY Hair production workshop" data-lightbox
+
+             data-caption-en="Production Workshop · Complete Workflow">
+      </div>
+      <p class="figure-note">
+        
+        Real workshop shot / no excessive retouching
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. 原料来源（3 类真人发原料）
+     ============================================================ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">RAW MATERIALS</div>
+      <h2 class="section-title">
+        
+        Carefully Selected Virgin Hair
+      </h2>
+      <p class="section-desc">
+        
+        We source premium Burmese, Yunnan and Vietnamese hair, graded by texture, length and color, with no mixed inferior hair.
+      </p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="origin-grid">
+      <!-- 【此处替换图片】原料图 3 张，建议统一 800 × 600 -->
+      <div class="origin-card" data-reveal>
+        <div class="media"><!-- 【此处替换图片】缅甸发原料 -->
+          <img src="images/origin-burmese-hair.jpg" alt="Burmese virgin hair" data-lightbox
+ data-caption-en="Burmese Virgin Hair · Soft &amp; Resilient"></div>
+        <div class="origin-body">
+          <span class="origin-tag">01 / BURMESE HAIR</span>
+          <h3>Burmese Hair</h3>
+          <p>Soft, resilient strands with a natural tone, suitable for long and straight hair products.</p>
+        </div>
+      </div>
+
+      <div class="origin-card" data-reveal>
+        <div class="media"><!-- 【此处替换图片】云南发原料 -->
+          <img src="images/origin-yunnan-hair.jpg" alt="Yunnan virgin hair" data-lightbox
+ data-caption-en="Yunnan Virgin Hair · Fine &amp; Natural"></div>
+        <div class="origin-body">
+          <span class="origin-tag">02 / YUNNAN HAIR</span>
+          <h3>Yunnan Hair</h3>
+          <p>Fine and naturally soft with even density, well suited to Asian wearers.</p>
+        </div>
+      </div>
+
+      <div class="origin-card" data-reveal>
+        <div class="media"><!-- 【此处替换图片】越南发原料 -->
+          <img src="images/origin-vietnamese-hair.jpg" alt="Vietnamese virgin hair" data-lightbox
+ data-caption-en="Vietnamese Virgin Hair · Strong &amp; Smooth"></div>
+        <div class="origin-body">
+          <span class="origin-tag">03 / VIETNAMESE HAIR</span>
+          <h3>Vietnamese Hair</h3>
+          <p>Strong, smooth strands with good durability, suitable for repeated dyeing and restyling.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. 完整生产链路（6 道工序）
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">PRODUCTION WORKFLOW</div>
+      <h2 class="section-title">
+        
+        Six In-house Steps From Raw Hair to Finished Goods
+      </h2>
+      <p class="section-desc">
+        
+        Every step is completed in-house, which keeps quality and lead time under control and allows order-specific adjustments.
+      </p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="process" data-reveal>
+      <!-- 【此处替换图片】工序图 6 张，建议统一 800 × 500，点击可放大 -->
+      <div class="process-step">
+        <div class="media"><!-- 【此处替换图片】工序 01 原料分选 -->
+          <img src="images/process-raw-sorting.jpg" alt="Raw material sorting" data-lightbox
+ data-caption-en="01 Raw Material Sorting"></div>
+        <div class="process-body">
+          <span class="process-num">01</span>
+          <h3>Raw Material Sorting</h3>
+          <p>Grading by texture, length and color; removing substandard strands.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="media"><!-- 【此处替换图片】工序 02 发丝处理 -->
+          <img src="images/process-hair-treatment.jpg" alt="Hair processing" data-lightbox
+ data-caption-en="02 Hair Processing"></div>
+        <div class="process-body">
+          <span class="process-num">02</span>
+          <h3>Hair Processing</h3>
+          <p>Cleaning, combing and alignment while keeping the natural texture.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="media"><!-- 【此处替换图片】工序 03 手工钩织 -->
+          <img src="images/process-hand-ventilating.jpg" alt="Hand ventilating" data-lightbox
+ data-caption-en="03 Hand Ventilating"></div>
+        <div class="process-body">
+          <span class="process-num">03</span>
+          <h3>Hand Ventilating</h3>
+          <p>Skilled workers ventilate strand by strand for a breathable, comfortable cap.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="media"><!-- 【此处替换图片】工序 04 定型 -->
+          <img src="images/process-styling.jpg" alt="Styling" data-lightbox
+ data-caption-en="04 Styling"></div>
+        <div class="process-body">
+          <span class="process-num">04</span>
+          <h3>Styling</h3>
+          <p>Styling and trimming to the ordered curl pattern and color.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="media"><!-- 【此处替换图片】工序 05 多轮质检 -->
+          <img src="images/process-quality-inspection.jpg" alt="Quality inspection" data-lightbox
+ data-caption-en="05 Quality Inspection"></div>
+        <div class="process-body">
+          <span class="process-num">05</span>
+          <h3>Quality Inspection</h3>
+          <p>Checking stitching, shedding, smoothness and odor.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="media"><!-- 【此处替换图片】工序 06 仓储打包 -->
+          <img src="images/process-packing.jpg" alt="Packing and storage" data-lightbox
+ data-caption-en="06 Packing &amp; Storage"></div>
+        <div class="process-body">
+          <span class="process-num">06</span>
+          <h3>Packing &amp; Storage</h3>
+          <p>Sorted storage, individual packing and shipment per order.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. 我们的坚持（4 项品质承诺）
+     ============================================================ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">OUR COMMITMENT</div>
+      <h2 class="section-title">
+        
+        Let Real Quality Speak for Itself
+      </h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="value-grid" data-reveal>
+      <div class="value-card">
+        <span class="v-mark">&#10003;</span>
+        <h3>Strict Sourcing</h3>
+        <p>Only premium virgin hair, graded by texture and length.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-mark">&#10003;</span>
+        <h3>No Mixing</h3>
+        <p>No inferior hair blended in, keeping batches consistent.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-mark">&#10003;</span>
+        <h3>Real Shots</h3>
+        <p>All photos and videos are real shots without excessive retouching.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-mark">&#10003;</span>
+        <h3>Custom Solutions</h3>
+        <p>Custom specs, density and packaging based on buyer requirements.</p>
+      </div>
+    </div>
+
+    <div class="quote-band band-spaced" data-reveal>
+      <p>
+        
+        "All photos and videos are real shots without excessive retouching for authentic quality display."
+      </p>
+      <span class="quote-by">DY HAIR / SHANDONG</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. 车间实拍（点击图片可放大）
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">FACTORY GALLERY</div>
+      <h2 class="section-title">
+        
+        A Closer Look at Our Production
+      </h2>
+      <p class="section-desc">
+        
+        Click any image to enlarge. On-site or virtual factory visits are welcome.
+      </p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="photo-grid">
+      <!-- 【此处替换图片】车间实拍 3 张，建议统一 1000 × 750 -->
+      <div class="photo-item" data-reveal>
+        <div class="media"><!-- 【此处替换图片】车间全景 -->
+          <img src="images/about-workshop-wide.jpg" alt="Workshop wide view" data-lightbox
+ data-caption-en="Workshop Wide View"></div>
+        <span class="shot-label">Workshop Wide View</span>
+      </div>
+      <div class="photo-item" data-reveal>
+        <div class="media"><!-- 【此处替换图片】钩织细节 -->
+          <img src="images/about-ventilating-detail.jpg" alt="Hand ventilating detail" data-lightbox
+ data-caption-en="Hand Ventilating Detail"></div>
+        <span class="shot-label">Ventilating Detail</span>
+      </div>
+      <div class="photo-item" data-reveal>
+        <div class="media"><!-- 【此处替换图片】成品实拍 -->
+          <img src="images/about-finished-goods.jpg" alt="Finished hair products" data-lightbox
+ data-caption-en="Finished Goods · True Color &amp; Texture"></div>
+        <span class="shot-label">Finished Goods</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. 底部行动号召
+     ============================================================ -->
+<section class="cta-band">
+  <div class="container" data-reveal>
+    <h2>
+      
+      Buyers Worldwide Are Welcome to Cooperate
+    </h2>
+    <p>
+      
+      Customized solutions available, with sample-based production and bulk orders welcome.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="contact.html">Contact Us &rarr;</a>
+      <a class="btn btn-ghost" href="gallery.html">View Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     页脚：全站统一，版权信息请勿修改
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">DY</span>
+        <span>
+          <span class="brand-name">DY Hair</span>
+          <span class="brand-sub">Virgin Hair Factory</span>
+        </span>
+      </div>
+      <p>
+        
+        Shandong DY Hair Products Factory · Direct supply of human virgin hair, specializing in lace wigs, closures, extensions and wefts. Custom orders welcome.
+      </p>
+    </div>
+
+    <div>
+      <h3>QUICK LINKS</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Factory</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="care.html">Hair Care</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>PRODUCT RANGE</h3>
+      <ul>
+        <li><a href="category-hair-weft.html">Hair Weft</a></li>
+        <li><a href="category-hair-extensions.html">Hair Extensions</a></li>
+        <li><a href="category-lace-closure.html">Lace Closure</a></li>
+        <li><a href="category-lace-wigs.html">Lace Wigs</a></li>
+        <li><a href="category-medical-wigs.html">Customized Medical Wigs</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 DY Hair | Shandong DY Hair Products Factory
+  </div>
+</footer>
+
+<!-- 全站公共脚本：语言切换 / 图片放大 / 移动端菜单 / 图片缺失静默处理 -->
+<script src="js/main.js"></script>
+</body>
+</html>

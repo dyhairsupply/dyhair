@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  页面：category-ponytail.html · 马尾 / Ponytail 分类产品页
+  项目：DY Hair 德宇发制品 · 外贸 B 端工厂官网
+  ------------------------------------------------------------
+  【页面作用】本分类的独立产品列表页，默认预留 50 个款式位。
+  【修改说明】
+  1. 加产品 / 改产品名：只改 js/products-data.js（唯一产品清单）。
+  2. 放图：把实拍图按 images/product-ponytail-01.jpg ~ -50.jpg
+     命名放进 images/ 即自动显示，未放图的位置是干净深色块。
+  3. 想让某款显示真实名称，在数据文件里把对应的
+     p('ponytail', 'ponytail-NN', '中文名', 'English Name') 改掉即可。
+  4. 每页显示 12 款，底部自动生成页码按钮（1 / 2 / 3 …）与上一页 / 下一页，
+     点页码只切换本页产品；网址加 ?page=2 可直接打开第 2 页。
+  5. 卡片渲染脚本为 7 个分类页共用的 js/category.js。
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Easy-to-wear ponytails with natural volume for daily and styling use. 100% human virgin hair, factory direct, custom orders welcome.">
+  <title>Ponytail | DY Hair</title>
+  <!-- 提前标记 JS 可用，用于滚动淡入动画（无 JS 时内容也会正常显示） -->
+  <script>document.documentElement.classList.add('js-ready');</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-category-page="ponytail">
+
+<!-- ============================================================
+     导航栏：7 个页面完全一致，仅 .active 所在项不同
+     ============================================================ -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <!-- 品牌 Logo（纯文字，无需图片） -->
+    <a class="brand" href="index.html" aria-label="DY Hair home">
+      <span class="brand-mark">DY</span>
+      <span>
+        <span class="brand-name">DY Hair</span>
+        <span class="brand-sub">
+          
+          Virgin Hair Factory
+        </span>
+      </span>
+    </a>
+
+    <!-- 主导航：7 个页面互相跳转 -->
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">Factory</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="product-detail.html">Product Detail</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="care.html">Hair Care</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      
+      <!-- 移动端汉堡菜单 -->
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     1. 分类顶部横幅（纯色渐变，无需额外图片素材）
+     ============================================================ -->
+<section class="page-banner plain">
+  <div class="container page-banner-inner">
+    <div class="eyebrow">CATEGORY 04</div>
+    <h1>Ponytail</h1>
+    <p class="banner-sub">Easy-to-wear ponytails with natural volume for daily and styling use.</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="products.html">Products</a>
+      <span class="sep">/</span>
+      Ponytail
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. 分类快速切换条
+     ============================================================ -->
+<section class="category-switch-section">
+  <div class="container">
+    <div class="category-switch">
+        <a href="category-hair-weft.html">Hair Weft</a>
+        <a href="category-hair-bulk.html">Hair Bulk</a>
+        <a href="category-hair-extensions.html">Hair Extensions</a>
+        <a href="category-ponytail.html" class="active">Ponytail</a>
+        <a href="category-lace-closure.html">Lace Closure</a>
+        <a href="category-lace-wigs.html">Lace Wigs</a>
+        <a href="category-medical-wigs.html">Customized Medical Wigs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. 本分类产品网格（卡片由 js/category.js 自动生成）
+     ============================================================ -->
+<section class="section category-list">
+  <div class="container">
+    <div class="category-toolbar">
+      <div class="eyebrow">ALL STYLES</div>
+      <p class="category-count" data-category-count></p>
+      <p class="category-note">
+        
+        Click an image to enlarge, or a product name for details. Specs, length and color can be customized per order.
+      </p>
+    </div>
+
+    <!-- 产品卡片由 js/category.js 渲染；图片按 images/product-ponytail-<序号>.jpg 命名 -->
+    <div class="product-grid category-grid" data-category-grid></div>
+
+    <!-- 页码按钮由 js/category.js 自动生成；网址加 ?page=2 可直接打开第 2 页 -->
+    <nav class="pager" data-category-pager aria-label="Product pagination" hidden></nav>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. 底部行动号召
+     ============================================================ -->
+<section class="cta-band">
+  <div class="container" data-reveal>
+    <h2>
+      
+      Need a Specification Not Listed? We Can Customize
+    </h2>
+    <p>
+      
+      Length, color, density, lace size and packaging can be adjusted per order. Catalog and quotation available on request.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="contact.html">Request a Quote &rarr;</a>
+      <a class="btn btn-ghost" href="about.html">About Our Factory</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     页脚：全站统一，版权信息请勿修改
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">DY</span>
+        <span>
+          <span class="brand-name">DY Hair</span>
+          <span class="brand-sub">Virgin Hair Factory</span>
+        </span>
+      </div>
+      <p>
+        
+        Shandong DY Hair Products Factory · Direct supply of human virgin hair, specializing in lace wigs, closures, extensions and wefts. Custom orders welcome.
+      </p>
+    </div>
+
+    <div>
+      <h3>QUICK LINKS</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Factory</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="care.html">Hair Care</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>PRODUCT RANGE</h3>
+      <ul>
+        <li><a href="category-hair-weft.html">Hair Weft</a></li>
+        <li><a href="category-hair-extensions.html">Hair Extensions</a></li>
+        <li><a href="category-lace-closure.html">Lace Closure</a></li>
+        <li><a href="category-lace-wigs.html">Lace Wigs</a></li>
+        <li><a href="category-medical-wigs.html">Customized Medical Wigs</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 DY Hair | Shandong DY Hair Products Factory
+  </div>
+</footer>
+
+<!-- 全站产品数据 → 公共脚本 → 分类页渲染脚本（顺序不可颠倒） -->
+<script src="js/products-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

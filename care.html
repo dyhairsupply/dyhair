@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  页面：care.html 假发保养说明（第 7 页 / 共 7 页 · 最后一页）
+  项目：DY Hair 德宇发制品 · 外贸 B 端工厂官网
+  ------------------------------------------------------------
+  【修改说明】
+  1. 换图：把真实图片按文件名放进 images/ 目录即可，代码无需改动
+     每张图片上方均有 【此处替换图片】 注释与拍摄建议
+     图片路径为占位路径，未上传时前台只显示干净的深色块，不会出现提示文字
+  2. 改文字：全站仅英文，直接改标签里的文字即可（无需成对修改）
+  3. 公共文件：css/style.css、js/main.js（与其余 6 页共用，请勿单页修改）
+  4. 本页新增组件样式见 style.css 第 24 节「保养说明页组件」
+     速查表直接复用第 21 节的 .spec-table，改样式会影响产品详情页
+  5. 本页内容为真人发制品通用护理建议；不同工艺（蕾丝网底 / 接发胶接 / 发帘）
+     的护理要求略有差异，页面底部已加「以随附说明为准」的声明
+  6. 图片文件名（本页 5 张，均为 care- 前缀，与其他页面无重复）：
+     care-banner.jpg, care-combing.jpg, care-washing.jpg,
+     care-drying.jpg, care-storage.jpg
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DY Hair human hair wig care guide: detangling, washing, drying, storage, heat styling and mistakes to avoid.">
+  <title>Hair Care | DY Hair</title>
+  <!-- 提前标记 JS 可用，用于滚动淡入动画（无 JS 时内容也会正常显示） -->
+  <script>document.documentElement.classList.add('js-ready');</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     导航栏：7 个页面完全一致，仅 .active 所在项不同
+     ============================================================ -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <!-- 品牌 Logo（纯文字，无需图片） -->
+    <a class="brand" href="index.html" aria-label="DY Hair home">
+      <span class="brand-mark">DY</span>
+      <span>
+        <span class="brand-name">DY Hair</span>
+        <span class="brand-sub">
+          
+          Virgin Hair Factory
+        </span>
+      </span>
+    </a>
+
+    <!-- 主导航：7 个页面互相跳转 -->
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">Factory</a>
+      <a href="products.html">Products</a>
+      <a href="product-detail.html">Product Detail</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="care.html" class="active">Hair Care</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      
+      <!-- 移动端汉堡菜单 -->
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     1. 内页顶部横幅
+     ============================================================ -->
+<section class="page-banner">
+  <!-- 【此处替换图片】保养说明页横幅，建议 1920 × 600，发丝特写或护理用品平铺 -->
+  <div class="media">
+    <img src="images/care-banner.jpg" alt="Human hair wig care guide" data-lightbox
+
+         data-caption-en="DY Hair · Daily Care for Human Virgin Hair">
+  </div>
+  <div class="container page-banner-inner">
+    <div class="eyebrow">HAIR CARE GUIDE</div>
+    <h1>
+      
+      Proper Care, Longer Lasting Hair
+    </h1>
+    <p class="banner-sub">
+      
+      Detangling, washing, drying, storage and mistakes to avoid for lace wigs, closures, extensions, wefts and ponytails.
+    </p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      Hair Care
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. 引言：为什么真人发需要专门护理
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">CARE BASICS</div>
+      <h2>
+        
+        Treat It Like Your Own Hair
+      </h2>
+      <p>
+        
+        Human virgin hair keeps its natural cuticle and can be dyed or restyled, so it needs gentle cleansing and regular care. Proper detangling, washing and storage noticeably reduce tangling, shedding and dryness while preserving smoothness and curl.
+      </p>
+      <div class="gold-line"></div>
+    </div>
+
+    <!-- 4 个日常保养步骤，每步配一张可点击放大的实拍示意图 -->
+    <div class="care-grid">
+
+      <!-- 步骤 01 · 梳理 -->
+      <article class="care-card" data-reveal>
+        <div class="media"><!-- 【此处替换图片】宽齿梳从发尾分段梳理，建议 1200 × 675 -->
+          <img src="images/care-combing.jpg" alt="Detangling human hair with a wide-tooth comb" data-lightbox
+ data-caption-en="Detangle from the ends upwards · Care Guide"></div>
+        <div class="care-head">
+          <span class="care-num">01</span>
+          <h3>Detangling</h3>
+        </div>
+        <ul>
+          <li>
+            
+            Detangle before and after each wear, starting at the ends and working up in sections; never pull from the roots.
+          </li>
+          <li>
+            
+            Use a wide-tooth comb or a wig brush; finger-comb curly styles to preserve the curl pattern.
+          </li>
+          <li>
+            
+            Wet hair stretches easily; separate gently with fingers or a wide-tooth comb without pulling.
+          </li>
+        </ul>
+      </article>
+
+      <!-- 步骤 02 · 清洗 -->
+      <article class="care-card" data-reveal>
+        <div class="media"><!-- 【此处替换图片】温水与洗发水轻按清洗，建议 1200 × 675 -->
+          <img src="images/care-washing.jpg" alt="Washing human hair gently in lukewarm water" data-lightbox
+ data-caption-en="Gentle lukewarm wash along the hair direction · Care Guide"></div>
+        <div class="care-head">
+          <span class="care-num">02</span>
+          <h3>Washing</h3>
+        </div>
+        <ul>
+          <li>
+            
+            Wash every 8–15 wears, or when oil and product buildup appear; daily washing is unnecessary.
+          </li>
+          <li>
+            
+            Use lukewarm water (about 30°C) and a mild sulfate-free shampoo; press gently along the hair direction, never rub or wring.
+          </li>
+          <li>
+            
+            Apply conditioner from mid-length to ends only, keeping it off the roots, lace base and bonded tips; rinse thoroughly.
+          </li>
+          <li>
+            
+            Do not soak the lace base for long, as ventilated knots and stitched seams may loosen.
+          </li>
+        </ul>
+      </article>
+
+      <!-- 步骤 03 · 吸干与风干 -->
+      <article class="care-card" data-reveal>
+        <div class="media"><!-- 【此处替换图片】假发支架自然风干，建议 1200 × 675 -->
+          <img src="images/care-drying.jpg" alt="Air drying a wig on a stand" data-lightbox
+ data-caption-en="Air-dry on a wig stand · Care Guide"></div>
+        <div class="care-head">
+          <span class="care-num">03</span>
+          <h3>Drying</h3>
+        </div>
+        <ul>
+          <li>
+            
+            Blot with a towel instead of rubbing back and forth, which damages the cuticle and causes tangles.
+          </li>
+          <li>
+            
+            Air-dry on a wig stand, away from direct sunlight and heater vents.
+          </li>
+          <li>
+            
+            Minimize blow-drying; if needed, use low or cool heat at least 15 cm away. Comb, style or store only once fully dry.
+          </li>
+        </ul>
+      </article>
+
+      <!-- 步骤 04 · 存放 -->
+      <article class="care-card" data-reveal>
+        <div class="media"><!-- 【此处替换图片】干透后放支架或透气收纳袋，建议 1200 × 675 -->
+          <img src="images/care-storage.jpg" alt="Storing a wig on a stand in a breathable bag" data-lightbox
+ data-caption-en="Store fully dry, away from light and dust · Care Guide"></div>
+        <div class="care-head">
+          <span class="care-num">04</span>
+          <h3>Storage</h3>
+        </div>
+        <ul>
+          <li>
+            
+            Store only when fully dry; damp storage can cause odor or mildew.
+          </li>
+          <li>
+            
+            Keep on a wig stand, in a breathable bag or the original box, away from light, dust, pressure and folding.
+          </li>
+          <li>
+            
+            Loosely gather curly styles or use a hair net to hold the curl pattern.
+          </li>
+          <li>
+            
+            For long-term storage, add a desiccant and keep away from heat and humidity.
+          </li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- 两条补充提示：热造型与佩戴习惯 -->
+    <div class="care-notes">
+      <div class="care-note" data-reveal>
+        <h3>Heat Styling &amp; Coloring</h3>
+        <p>
+          
+          Virgin hair can be restyled and dyed. Keep tools at 160–180°C or below and apply a heat protectant first; avoid repeated high heat on one section and keep heat away from the lace base, seams and bonds. Bleaching or lightening shortens hair life, so have it done by a professional stylist.
+        </p>
+      </div>
+      <div class="care-note" data-reveal>
+        <h3>Wearing &amp; Regular Care</h3>
+        <p>
+          
+          Comb and adjust the hairline before wearing, and return the piece to a stand afterwards to recover its shape. Avoid sleeping, swimming or saunas while wearing it. Periodic deep conditioning helps over time; if tangling or shedding increases, consult a professional instead of force-combing.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     3. 常见误区 / 避坑清单
+     ============================================================ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">MISTAKES TO AVOID</div>
+      <h2>
+        
+        What Shortens the Life of Your Hair
+      </h2>
+      <p>
+        
+        Most of these mistakes come from treating a wig like ordinary fabric. Avoiding them is far more effective than repairing damage later.
+      </p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="dont-grid">
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>Hot water, or products containing sulfates and alcohol.</p>
+      </div>
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>Yanking from the roots or using a fine-tooth comb on tangles.</p>
+      </div>
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>Rubbing, wringing or towel-drying wet hair back and forth.</p>
+      </div>
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>Applying conditioner or masks to the lace base or bonded tips.</p>
+      </div>
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>Storing while damp, or wearing it while sleeping, swimming or in a sauna.</p>
+      </div>
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>High-heat blow-drying, frequent bleaching, or repeated heat on one section.</p>
+      </div>
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>Direct sun exposure, or storing near heaters and humid bathrooms.</p>
+      </div>
+      <div class="dont-item">
+        <span class="dont-mark">&times;</span>
+        <p>Folding or storing under pressure, or leaving it uncombed and unwashed for long.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     4. 保养参数速查表（复用 .spec-table 样式）
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">QUICK REFERENCE</div>
+      <h2>
+        
+        Key Care Parameters
+      </h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>ITEM</th>
+          <th>RECOMMENDATION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Washing Frequency</th>
+          <td>Every 8–15 wears, or when oil and product buildup appear</td>
+        </tr>
+        <tr>
+          <th>Water Temperature</th>
+          <td>Lukewarm water at about 30°C; avoid hot water</td>
+        </tr>
+        <tr>
+          <th>Products</th>
+          <td>Mild sulfate-free shampoo plus conditioner on mid-lengths and ends</td>
+        </tr>
+        <tr>
+          <th>Styling Temperature</th>
+          <td>Keep at or below 160–180°C with a heat protectant</td>
+        </tr>
+        <tr>
+          <th>Drying</th>
+          <td>Blot with a towel, then air-dry on a stand away from sunlight</td>
+        </tr>
+        <tr>
+          <th>Storage</th>
+          <td>Fully dry, dark, dust-free, breathable and free of pressure</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 通用建议声明 -->
+    <div class="quote-band care-disclaimer band-spaced" data-reveal>
+      <p>
+        
+        These are general care guidelines for human hair products. Requirements vary by construction such as lace bases, bonded extensions and wefts; always follow the instructions supplied with your product.
+      </p>
+      <span class="quote-by">DY HAIR · CARE NOTE</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     5. 底部行动号召
+     ============================================================ -->
+<section class="cta-band">
+  <div class="container" data-reveal>
+    <h2>
+      
+      Want to Know How Our Products Are Made?
+    </h2>
+    <p>
+      
+      From raw material sorting to multi-round QC, every step is handled in-house. Contact us for a full care guide or product catalog.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="contact.html">Contact Us &rarr;</a>
+      <a class="btn btn-ghost" href="products.html">View Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     页脚：全站统一，版权信息请勿修改
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">DY</span>
+        <span>
+          <span class="brand-name">DY Hair</span>
+          <span class="brand-sub">Virgin Hair Factory</span>
+        </span>
+      </div>
+      <p>
+        
+        Shandong DY Hair Products Factory · Direct supply of human virgin hair, specializing in lace wigs, closures, extensions and wefts. Custom orders welcome.
+      </p>
+    </div>
+
+    <div>
+      <h3>QUICK LINKS</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Factory</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="care.html">Hair Care</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>PRODUCT RANGE</h3>
+      <ul>
+        <li><a href="category-hair-weft.html">Hair Weft</a></li>
+        <li><a href="category-hair-extensions.html">Hair Extensions</a></li>
+        <li><a href="category-lace-closure.html">Lace Closure</a></li>
+        <li><a href="category-lace-wigs.html">Lace Wigs</a></li>
+        <li><a href="category-medical-wigs.html">Customized Medical Wigs</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 DY Hair | Shandong DY Hair Products Factory
+  </div>
+</footer>
+
+<!-- 全站公共脚本：语言切换 / 图片放大 / 移动端菜单 / 图片缺失静默处理 -->
+<script src="js/main.js"></script>
+</body>
+</html>
